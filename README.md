@@ -21,7 +21,7 @@ Version **1.2.1** includes a theme-aware progress popup, safe pull-first synchro
 
 ## Installation
 
-1. Download the latest installation ZIP from the [Releases](https://github.com/NandSch/Obsidian-Google-Drive-Sync-Plugin/releases) page, or clone this repository and copy the three runtime files.
+1. Download `main.js`, `manifest.json`, and `styles.css` from this repository, or download the current package from the shared local output folder.
 2. Close Obsidian.
 3. Copy `main.js`, `manifest.json`, and `styles.css` into:
 
