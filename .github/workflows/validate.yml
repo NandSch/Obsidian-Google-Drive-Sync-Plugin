@@ -2,7 +2,8 @@ name: Validate plugin
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   pull_request:
 
 permissions:
@@ -23,6 +24,6 @@ jobs:
         run: npm ci --ignore-scripts
       - name: Build and test
         run: npm run check
-      - name: Test installer
+      - name: Installer tests
         shell: pwsh
         run: ./tests/installer.test.ps1
