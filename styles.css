@@ -1,0 +1,30 @@
+.drive-vault-sync-status { cursor: pointer; }
+.drive-vault-sync-log { white-space: pre-wrap; overflow-wrap: anywhere; max-height: 55vh; overflow-y: auto; font-size: var(--font-smaller); }
+.drive-vault-sync-error { color: var(--text-error); }
+.drive-vault-sync-closing { position: fixed; inset: 0; z-index: 10000; background: var(--background-modifier-cover); display: flex; align-items: center; justify-content: center; padding: 24px; }
+.drive-vault-sync-close-panel { box-sizing: border-box; width: min(520px, 100%); min-width: 0; max-height: calc(100vh - 48px); overflow-y: auto; padding: 28px; border: 1px solid var(--background-modifier-border); border-radius: var(--radius-l); background: var(--background-primary); color: var(--text-normal); box-shadow: var(--shadow-l); }
+.drive-vault-sync-close-hint { color: var(--text-muted); font-size: var(--font-small); }
+.notice.drive-vault-sync-notice { background: var(--background-primary); color: var(--text-normal); border: 1px solid var(--background-modifier-border); border-radius: var(--radius-m, 8px); box-shadow: var(--shadow-s); cursor: default; }
+.drive-vault-sync-notice-message { box-sizing: border-box; min-width: 0; max-width: 100%; background: transparent; color: inherit; border: 0; box-shadow: none; }
+.drive-vault-sync-notice-message.drive-vault-sync-notice { background: var(--background-primary); color: var(--text-normal); border: 1px solid var(--background-modifier-border); border-radius: var(--radius-m, 8px); box-shadow: var(--shadow-s); }
+.drive-vault-sync-progress { box-sizing: border-box; width: 100%; max-width: 100%; min-width: 0; display: flex; flex-direction: column; gap: 8px; padding: 0; color: var(--text-normal); font-size: var(--font-ui-small, 13px); line-height: 1.45; overflow-wrap: anywhere; }
+.drive-vault-sync-progress > * { box-sizing: border-box; min-width: 0; max-width: 100%; }
+.drive-vault-sync-progress-title { font-weight: var(--font-semibold, 600); }
+.drive-vault-sync-progress-detail { color: var(--text-muted); font-size: var(--font-ui-smaller, 12px); }
+.drive-vault-sync-progress progress { display: block; flex-shrink: 0; width: 100%; min-width: 0; max-width: 100%; height: 6px; appearance: none; border: 0; border-radius: var(--radius-s, 4px); overflow: hidden; background: var(--background-modifier-border); accent-color: var(--interactive-accent); }
+.drive-vault-sync-progress progress::-webkit-progress-bar { background: var(--background-modifier-border); border-radius: inherit; }
+.drive-vault-sync-progress progress::-webkit-progress-value { background: var(--interactive-accent); border-radius: inherit; }
+.drive-vault-sync-progress progress::-moz-progress-bar { background: var(--interactive-accent); border-radius: inherit; }
+.drive-vault-sync-progress progress:not([value]) { background: linear-gradient(90deg, var(--background-modifier-border) 30%, var(--interactive-accent) 50%, var(--background-modifier-border) 70%); background-size: 250% 100%; animation: drive-vault-sync-indeterminate 1.6s linear infinite; }
+.drive-vault-sync-progress progress:not([value])::-webkit-progress-bar { background: transparent; }
+.drive-vault-sync-progress-file { overflow-wrap: anywhere; white-space: normal; color: var(--text-muted); font-size: var(--font-ui-smaller, 12px); max-height: 4.5em; overflow-y: auto; }
+.drive-vault-sync-progress-buttons { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; margin-top: 4px; }
+.drive-vault-sync-progress-buttons button { box-sizing: border-box; min-width: 0; max-width: 100%; height: auto; min-height: var(--input-height, 30px); padding: 5px 10px; white-space: normal; overflow-wrap: anywhere; color: var(--text-normal); background: var(--interactive-normal); border: 1px solid var(--background-modifier-border); border-radius: var(--radius-s, 4px); box-shadow: none; cursor: pointer; }
+.drive-vault-sync-progress-buttons button:hover { background: var(--interactive-hover); border-color: var(--background-modifier-border-hover, var(--background-modifier-border)); }
+.drive-vault-sync-progress-buttons button:disabled { cursor: default; opacity: 0.65; }
+.drive-vault-sync-progress-buttons button:focus-visible { outline: 2px solid var(--interactive-accent); outline-offset: 2px; }
+.drive-vault-sync-progress [hidden] { display: none !important; }
+.drive-vault-sync-progress[data-outcome='error'] .drive-vault-sync-progress-title { color: var(--text-error); }
+.drive-vault-sync-close-panel .drive-vault-sync-progress { width: 100%; padding: 8px 0; }
+@keyframes drive-vault-sync-indeterminate { from { background-position: 100% 0; } to { background-position: 0 0; } }
+@media (prefers-reduced-motion: reduce) { .drive-vault-sync-progress progress { animation: none !important; } }
