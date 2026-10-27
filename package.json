@@ -1,0 +1,19 @@
+{
+  "name": "drive-vault-sync",
+  "version": "1.2.1",
+  "private": true,
+  "description": "Conservative pull-first Google Drive sync for Obsidian Desktop",
+  "scripts": {
+    "build": "tsc --noEmit && node build.mjs",
+    "test": "node test.mjs",
+    "check": "npm run build && npm test"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "esbuild": "^0.25.0",
+    "obsidian": "1.14.4",
+    "typescript": "^5.9.0"
+  },
+  "engines": { "node": ">=22" },
+  "license": "MIT"
+}
