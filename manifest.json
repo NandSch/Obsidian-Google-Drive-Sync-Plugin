@@ -1,0 +1,9 @@
+{
+  "id": "drive-vault-sync",
+  "name": "Drive Vault Sync",
+  "version": "1.2.1",
+  "minAppVersion": "1.11.4",
+  "description": "Synchronize a vault with Google Drive, downloading remote changes first and preserving conflicting versions.",
+  "author": "Local tools",
+  "isDesktopOnly": true
+}
